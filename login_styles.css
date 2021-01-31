@@ -1,0 +1,62 @@
+body {
+  background-color: #f8f4fd;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+input {
+  margin: 10px;
+  border-radius: 4px;
+  border: none;
+  padding: 10px;
+  width: 70%;
+}
+
+#login-container {
+  background-color: #e8dffd;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 4px;
+  width: 60%;
+  height: 50%;
+}
+
+#login-info {
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-items: center;
+}
+
+#welcome-text {
+  font-size: 50px;
+  font-weight: 700;
+  color: #ab96ff;
+  margin-bottom: 10px;
+  box-shadow: 4px;
+  text-shadow: 2px 2px grey;
+}
+
+#welcome-subtext {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#join {
+  margin-top: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: white;
+  background-color: #ab96ff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 400;
+}

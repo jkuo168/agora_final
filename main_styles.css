@@ -4,6 +4,15 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+input {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  border: none;
+  padding: 10px;
+  width: 70%;
+}
+
 .hidden-helper-text {
   display: none;
 }
@@ -13,6 +22,10 @@ body {
   color: red;
   margin-top: 5px;
   margin-bottom: 0px;
+}
+
+.incorrect {
+  border: 2px solid red;
 }
 
 #flex {
@@ -45,9 +58,6 @@ body {
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
-  width: 70%;
-  padding: 10px;
-  border: none;
 }
 
 #join-button {
@@ -64,34 +74,31 @@ body {
 }
 
 #create-text {
-  margin-top: 20%;
+  margin-top: 15%;
 }
 
 #event-name {
   margin-top: 10px;
   width: 70%;
   padding: 10px;
-  border: none;
 }
 
 #new-channel-name {
   margin-top: 10px;
   width: 70%;
   padding: 10px;
-  border: none;
 }
 
 #date {
   margin-top: 10px;
   width: 70%;
   padding: 10px;
-  border: none;
 }
+
 #time {
   margin-top: 10px;
   width: 70%;
   padding: 10px;
-  border: none;
 }
 
 #create-button {
@@ -134,6 +141,7 @@ body {
 
 #event-text {
   margin-top: 20px;
+  margin-bottom: 10px;
   text-align: center;
   font-size: 40px;
   font-weight: 400;
@@ -145,15 +153,54 @@ body {
   flex-wrap: wrap;
   height: 90%;
   overflow: auto;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
-.event-cards {
-  width: 20vh;
-  height: 20vh;
+.event-card {
+  width: 30%;
+  height: 40%;
   background-color: white;
   text-align: center;
   filter: drop-shadow(3px 3px 5px grey);
-  margin: 100px;
+  margin: 20px;
   border-radius: 5px;
+}
+
+.event-name {
+  text-align: center;
+  margin: 10px;
+}
+
+.event-image-container {
+  height: 65%;
+}
+
+.event-image {
+  width: 100%;
+  height: 100%;
+}
+
+.event-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.event-channel-name {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  text-align: left;
+}
+
+.event-date {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+.event-time {
+  padding-right: 10px;
+  padding-left: 10px;
 }

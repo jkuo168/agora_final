@@ -11,12 +11,15 @@
             <div id="left-pane">
                 <div id="welcome-text">Welcome Joanna Kuo!</div>
                 <div id="join-channel-text">Join a Channel</div>
-                <input id="channel-name" placeholder="Channel Name"/>
-                <div id="channel-name-helper" class="hidden-helper-text">Please input a channel name</div>
-                <button id="join-button">Join</button>
+                <form action="./video.html" onsubmit="return join()">
+                    <input id="channel-name" placeholder="Channel Name" name="channel-name"/>
+                    <div id="channel-name-helper" class="hidden-helper-text">Please input a channel name</div>
+                    <button id="join-button" onclick="join()">Join</button>
+                </form>
+
                 <div id="create-text">Create an Event!</div>
-                <input id="event-name" placeholder="Event Name"/>
-                <div id="channel-name-helper" class="hidden-helper-text">Please input a channel name</div>
+                <input id="new-event-name" placeholder="Event Name"/>
+                <div id="new-event-name-helper" class="hidden-helper-text">Please input the name of the event</div>
                 <input id="new-channel-name" placeholder="Channel Name"/>
                 <div id="new-channel-name-helper" class="hidden-helper-text">Please input the channel name of the event</div>
                 <input id="date" type="date"/>
@@ -24,6 +27,7 @@
                 <input id="time" type="time"/>
                 <div id="time-helper" class="hidden-helper-text">Please input the time of the event</div>
                 <button id="create-button">Create</button>
+
                 <a href="/login.html">
                     <div id="log-out-container">
                         <div id="log-out-icon">
@@ -36,16 +40,78 @@
             <div id="right-pane">
                 <div id="event-text">Events</div>
                 <div id="event-container">
-                    <div class="event-cards">Hello</div> 
-                    <div class="event-cards">Hello</div> 
-                    <div class="event-cards">Hello</div> 
-                    <div class="event-cards">Hello</div> 
-                    <div class="event-cards">Hello</div> 
-                    <div class="event-cards">Hello</div> 
-                    <div class="event-cards">Hello</div> 
-                    <div class="event-cards">Hello</div> 
-                    <div class="event-cards">Hello</div> 
-                    <div class="event-cards">Hello</div> 
+                    <div class="event-card">
+                       <div class="event-name">Breakfast Feast!</div> 
+                        <div class="event-image-container">
+                         <img class="event-image" src="/assets/breakfast_1.jpg">
+                        </div>
+                        <div class="event-channel-name"><strong>Channel Name:</strong> brekki</div>
+                        <div class="event-info">
+                            <div class="event-date"><strong>Date:</strong> 2021-02-12</div>
+                            <div class="flex-grow"></div>
+                            <div class="event-time"><strong>Time:</strong> 9:00 AM</div>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-name">Daily Brunch</div> 
+                         <div class="event-image-container">
+                          <img class="event-image" src="/assets/lunch_2.jpg">
+                         </div>
+                         <div class="event-channel-name"><strong>Channel Name:</strong> dailyBrunch</div>
+                         <div class="event-info">
+                             <div class="event-date"><strong>Date:</strong> 2021-02-13</div>
+                             <div class="flex-grow"></div>
+                             <div class="event-time"><strong>Time:</strong> 12:00 PM</div>
+                         </div>
+                     </div>
+                     <div class="event-card">
+                        <div class="event-name">Birthday Parti</div> 
+                         <div class="event-image-container">
+                          <img class="event-image" src="/assets/dinner_3.jpg">
+                         </div>
+                         <div class="event-channel-name"><strong>Channel Name:</strong> bdayParti</div>
+                         <div class="event-info">
+                             <div class="event-date"><strong>Date:</strong> 2021-02-23</div>
+                             <div class="flex-grow"></div>
+                             <div class="event-time"><strong>Time:</strong> 6:00 PM</div>
+                         </div>
+                     </div>
+                     <div class="event-card">
+                        <div class="event-name">Mukbang</div> 
+                         <div class="event-image-container">
+                          <img class="event-image" src="/assets/dinner_1.jpg">
+                         </div>
+                         <div class="event-channel-name"><strong>Channel Name:</strong> mukbang123</div>
+                         <div class="event-info">
+                             <div class="event-date"><strong>Date:</strong> 2021-02-16</div>
+                             <div class="flex-grow"></div>
+                             <div class="event-time"><strong>Time:</strong> 9:00 PM</div>
+                         </div>
+                     </div>
+                     <div class="event-card">
+                        <div class="event-name">Family Lunch</div> 
+                         <div class="event-image-container">
+                          <img class="event-image" src="/assets/lunch_3.jpg">
+                         </div>
+                         <div class="event-channel-name"><strong>Channel Name:</strong> bdayParti</div>
+                         <div class="event-info">
+                             <div class="event-date"><strong>Date:</strong> 2021-02-12</div>
+                             <div class="flex-grow"></div>
+                             <div class="event-time"><strong>Time:</strong> 11:00 AM</div>
+                         </div>
+                     </div>
+                     <div class="event-card">
+                        <div class="event-name">Morning People</div> 
+                         <div class="event-image-container">
+                          <img class="event-image" src="/assets/breakfast_2.jpg">
+                         </div>
+                         <div class="event-channel-name"><strong>Channel Name:</strong> morningPeeps</div>
+                         <div class="event-info">
+                             <div class="event-date"><strong>Date:</strong> 2021-02-11</div>
+                             <div class="flex-grow"></div>
+                             <div class="event-time"><strong>Time:</strong> 6:00 AM</div>
+                         </div>
+                     </div>
                 </div>       
             </div>
         </div>

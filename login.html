@@ -9,19 +9,25 @@
     <body>
         <div id="login-container"></div>
             <div id="login-info">
+                <img id="bowl" src="/assets/bowl.png" />
                 <div id="welcome-text">
                     Dînez Avec Moi!
                 </div>
-                <div id="welcome-subtext">A virtual space to grab a meal and socialize with friends, family, and others around the world</div>
-                <input id="username" placeholder="Username"/>
-                <br/>
-                <input id="first-name" placeholder="First Name"/>
-                <br/>
-                <input id="last-name" placeholder="Last Name"/>
-                <br/>
-                <button id="join">Join</button>
+                <form action="./main.html" onsubmit="return validate()">
+                    <div id="welcome-subtext">A virtual space to grab a meal and socialize with friends, family, and others around the world</div>
+                    <input id="username" placeholder="Username" name="username"/>
+                    <div id="username-helper" class="hidden-helper-text">Please input a username</div>
+                    <input id="first-name" placeholder="First Name" name="first-name"/>
+                    <div id="first-name-helper" class="hidden-helper-text">Please input your first name</div>
+                    <input id="last-name" placeholder="Last Name" name ="last-name"/>
+                    <div id="last-name-helper" class="hidden-helper-text">Please input your last name</div>
+                    <br/>
+                    <button id="login" onclick="validate()">Login</button>
+                </form>
             </div>
         </div>
     </body>
+    <script src="https://cdn.agora.io/sdk/release/AgoraRTCSDK-3.0.0.js"></script>
+    <script src="login.js"></script>
 </html>
 

@@ -1,0 +1,159 @@
+body {
+  background-color: #f8f4fd;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.hidden-helper-text {
+  display: none;
+}
+
+.shown-helper-text {
+  font-size: 10px;
+  color: red;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+#flex {
+  display: flex;
+  flex-direction: row;
+}
+
+#left-pane {
+  background-color: #e8dffd;
+  width: 20%;
+  height: 100vh;
+  text-align: center;
+  min-width: 300px;
+}
+
+#welcome-text {
+  color: #ab96ff;
+  font-size: 30px;
+  padding-top: 60px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-weight: 600;
+}
+
+#join-channel-text {
+  margin-top: 30px;
+}
+
+#channel-name {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 70%;
+  padding: 10px;
+  border: none;
+}
+
+#join-button {
+  margin-top: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: white;
+  background-color: #ab96ff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 400;
+}
+
+#create-text {
+  margin-top: 20%;
+}
+
+#event-name {
+  margin-top: 10px;
+  width: 70%;
+  padding: 10px;
+  border: none;
+}
+
+#new-channel-name {
+  margin-top: 10px;
+  width: 70%;
+  padding: 10px;
+  border: none;
+}
+
+#date {
+  margin-top: 10px;
+  width: 70%;
+  padding: 10px;
+  border: none;
+}
+#time {
+  margin-top: 10px;
+  width: 70%;
+  padding: 10px;
+  border: none;
+}
+
+#create-button {
+  margin-top: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: white;
+  background-color: #ab96ff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 400;
+}
+
+#log-out-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#log-out-text {
+  position: absolute;
+  bottom: 10;
+  left: 45;
+}
+
+#log-out-icon {
+  width: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: absolute;
+  bottom: 10;
+  left: 10;
+}
+
+#right-pane {
+  height: 100vh;
+}
+
+#event-text {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+#event-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 90%;
+  overflow: auto;
+  justify-content: space-between;
+}
+
+.event-cards {
+  width: 20vh;
+  height: 20vh;
+  background-color: white;
+  text-align: center;
+  filter: drop-shadow(3px 3px 5px grey);
+  margin: 100px;
+  border-radius: 5px;
+}

@@ -1,0 +1,175 @@
+body {
+  background-color: #f8f4fd;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+input {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  border: none;
+  padding: 10px;
+  width: 70%;
+}
+
+.hidden-helper-text {
+  display: none;
+}
+
+.shown-helper-text {
+  font-size: 10px;
+  color: red;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.incorrect {
+  border: 2px solid red;
+}
+
+#flex {
+  display: flex;
+  flex-direction: row;
+}
+
+#left-pane {
+  background-color: #e8dffd;
+  width: 20%;
+  height: 100vh;
+  text-align: center;
+  min-width: 300px;
+}
+
+#welcome-text {
+  color: #ab96ff;
+  font-size: 30px;
+  padding-top: 40px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-weight: 600;
+}
+
+#leave-button {
+  margin-top: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: white;
+  background-color: #ab96ff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 400;
+}
+
+#log-out-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#log-out-text {
+  position: absolute;
+  bottom: 10;
+  left: 45;
+}
+
+#log-out-icon {
+  width: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: absolute;
+  bottom: 10;
+  left: 10;
+}
+
+#participant-text {
+  margin-top: 30px;
+  font-weight: 600;
+}
+
+#participants-container {
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border: 2px solid black;
+  border-radius: 4px;
+  min-height: 100px;
+  max-height: 150px;
+  overflow: auto;
+}
+
+.participant {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+#right-pane {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  height: 100vh;
+}
+
+#main-frame-name {
+  margin-top: 30px;
+  font-size: smaller;
+}
+
+#main-frame {
+  width: 90%;
+  height: 50%;
+  border: 2px solid #ab96ff;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#child-frames {
+  display: flex;
+  flex-direction: row;
+  max-width: 70%;
+  overflow-x: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.child {
+  border: 2px solid #ab96ff;
+  border-radius: 5px;
+  width: 70%;
+  min-width: 400px;
+  height: 200px;
+  margin-right: 10px;
+}
+
+#video-mute-bar {
+  bottom: 0;
+  height: 8%;
+  width: 40%;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 20px 20px 0px 0px;
+  position: absolute;
+}
+
+#flex-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#mic {
+  width: 7%;
+  color: #ab96ff;
+}
+
+#video {
+  width: 7%;
+  color: #ab96ff;
+}

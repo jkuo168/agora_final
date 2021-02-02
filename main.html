@@ -9,11 +9,13 @@
     <body>
         <div id="flex">
             <div id="left-pane">
-                <div id="welcome-text">Welcome Joanna Kuo!</div>
+                <div id="welcome-text"></div>
                 <div id="join-channel-text">Join a Channel</div>
                 <form action="./video.html" onsubmit="return join()">
                     <input id="channel-name" placeholder="Channel Name" name="channel-name"/>
-                    <div id="channel-name-helper" class="hidden-helper-text">Please input a channel name</div>
+                    <input id="username" type="hidden" name="username"/>
+                    <input id="first-name" type="hidden" name="first-name"/>
+                    <input id="last-name" type="hidden" name="last-name"/>                    <div id="channel-name-helper" class="hidden-helper-text">Please input a channel name</div>
                     <button id="join-button" onclick="join()">Join</button>
                 </form>
 
@@ -67,7 +69,7 @@
                      <div class="event-card">
                         <div class="event-name">Birthday Parti</div> 
                          <div class="event-image-container">
-                          <img class="event-image" src="/assets/dinner_3.jpg">
+                          <img class="event-image" src="/assets/dinner_1.jpg">
                          </div>
                          <div class="event-channel-name"><strong>Channel Name:</strong> bdayParti</div>
                          <div class="event-info">
@@ -79,7 +81,7 @@
                      <div class="event-card">
                         <div class="event-name">Mukbang</div> 
                          <div class="event-image-container">
-                          <img class="event-image" src="/assets/dinner_1.jpg">
+                          <img class="event-image" src="/assets/dinner_3.jpg">
                          </div>
                          <div class="event-channel-name"><strong>Channel Name:</strong> mukbang123</div>
                          <div class="event-info">

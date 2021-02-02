@@ -11,6 +11,10 @@ document.getElementById(
 
 let join = () => {
   let channel_name = document.getElementById("channel-name").value;
+  document.getElementById("username").value = username;
+  document.getElementById("first-name").value = first_name;
+  document.getElementById("last-name").value = last_name;
+
   let check = true;
   if (!channel_name) {
     document.getElementById("channel-name").className = "incorrect";

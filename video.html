@@ -1,7 +1,7 @@
 <html>
     <head>
         <title></title>
-        <link rel="stylesheet" href="main_styles.css"/>
+        <link rel="stylesheet" href="video_styles.css"/>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
@@ -9,23 +9,17 @@
     <body>
         <div id="flex">
             <div id="left-pane">
-                <div id="welcome-text">Welcome Joanna Kuo!</div>
-                <div id="join-channel-text">Join a Channel</div>
-                <form action="./video.html" onsubmit="return join()">
-                    <input id="channel-name" placeholder="Channel Name" name="channel-name"/>
-                    <div id="channel-name-helper" class="hidden-helper-text">Please input a channel name</div>
-                    <button id="join-button" onclick="join()">Join</button>
+                <div id="welcome-text">Welcome to the 123 Channel!</div>
+                <form action="/main.html" onclick="return leave()">
+                    <input id="username" type="hidden" name="username"/>
+                    <input id="first-name" type="hidden" name="first-name"/>
+                    <input id="last-name" type="hidden" name="last-name"/>
+                    <button id="leave-button" onclick="leave()">Leave Channel</button>
                 </form>
-                <div id="create-text">Create an Event!</div>
-                <input id="event-name" placeholder="Event Name"/>
-                <div id="channel-name-helper" class="hidden-helper-text">Please input a channel name</div>
-                <input id="new-channel-name" placeholder="Channel Name"/>
-                <div id="new-channel-name-helper" class="hidden-helper-text">Please input the channel name of the event</div>
-                <input id="date" type="date"/>
-                <div id="date-helper" class="hidden-helper-text">Please input the date of the event</div>
-                <input id="time" type="time"/>
-                <div id="time-helper" class="hidden-helper-text">Please input the time of the event</div>
-                <button id="create-button">Create</button>
+                <div id="participant-text">Participants</div>
+                <div id="participants-container">
+                </div>
+                <div id="chat"></div>
                 <a href="/login.html">
                     <div id="log-out-container">
                         <div id="log-out-icon">
@@ -40,6 +34,6 @@
         </div>
     </body>
     <script src="https://cdn.agora.io/sdk/release/AgoraRTCSDK-3.0.0.js"></script>
-    <script src="main.js"></script>
+    <script src="video.js"></script>
 </html>
 

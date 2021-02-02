@@ -204,9 +204,9 @@ input {
 .sent-message {
   background-color: #ab96ff;
   border-radius: 10px;
-  margin-left: 65%;
+  margin-left: 45%;
   margin-bottom: 10px;
-  width: 30%;
+  width: 50%;
   align-self: right;
   padding: 3px;
 }
@@ -224,7 +224,7 @@ input {
   background-color: white;
   border-radius: 10px;
   margin-left: 5px;
-  width: 30%;
+  width: 50%;
   align-self: right;
   padding: 3px;
 }

@@ -165,7 +165,7 @@ let removeVideoStream = (event) => {
 };
 
 let leave = () => {
-  client.leave(function () {
+  client.leave(() => {
     console.log("Sucessfully left!");
   }, handleError);
   removeMyVideoStream();

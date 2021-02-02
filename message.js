@@ -12,14 +12,6 @@ message_client
       .join(appID)
       .then(() => {
         console.log("Successfully joined");
-        // channel
-        //   .sendMessage(message)
-        //   .then(() => {
-        //     document.getElementById("chat").innerHTML = message.text;
-        //   })
-        //   .catch((error) => {
-        //     console.log(error);
-        //   });
       })
       .catch((error) => {
         console.log(error);
@@ -29,26 +21,50 @@ message_client
     console.log(error);
   });
 
-console.log("here");
-
 let send = () => {
-  let message = message_client.createMessage({ text: "hello" });
-  channel
-    .sendMessage(message)
-    .then(() => {
-      let message_div = document.createElement("div");
-      message_div.innerHTML = message.text;
-      document.getElementById("chat").appendChild(message_div);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+  let message_text = document.getElementById("message").value;
+  if (message_text) {
+    document.getElementById("message").className = "";
+    document.getElementById("message").value = "";
+    document.getElementById("message-helper-text").className =
+      "hidden-helper-text";
+
+    let message = message_client.createMessage({ text: message_text });
+    channel
+      .sendMessage(message)
+      .then(() => {
+        let message_container = document.createElement("div");
+        let message_div = document.createElement("div");
+        let message_member = document.createElement("div");
+        message_member.innerHTML = user_name;
+        message_member.className = "sent-member";
+        message_div.className = "sent-message";
+        message_div.innerHTML = message.text;
+        message_container.appendChild(message_member);
+        message_container.appendChild(message_div);
+        document.getElementById("chat").appendChild(message_container);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  } else {
+    document.getElementById("message").className = "incorrect";
+    document.getElementById("message-helper-text").className =
+      "shown-helper-text";
+    document.getElementById("message-helper-text").style.textAlign = "left";
+    document.getElementById("message-helper-text").style.marginLeft = "55px";
+  }
 };
 
 channel.on("ChannelMessage", (message, memberId) => {
-  console.log("RECEIVED MESSAGE");
-  console.log(message, memberId);
+  let message_container = document.createElement("div");
   let message_div = document.createElement("div");
+  let message_member = document.createElement("div");
+  message_member.innerHTML = user_name;
+  message_member.className = "received-member";
+  message_div.className = "received-message";
   message_div.innerHTML = message.text;
-  document.getElementById("chat").appendChild(message_div);
+  message_container.appendChild(message_member);
+  message_container.appendChild(message_div);
+  document.getElementById("chat").appendChild(message_container);
 });

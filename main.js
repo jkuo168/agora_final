@@ -115,7 +115,7 @@ document.getElementById("create-button").onclick = () => {
 
     let event_image = document.createElement("img");
     event_image.className = "event-image";
-    event_image.src = `/assets/${meal}_${num}.jpg`;
+    event_image.src = `./assets/${meal}_${num}.jpg`;
     event_image_div.appendChild(event_image);
 
     let event_channel_name_div = document.createElement("div");

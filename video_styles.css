@@ -209,6 +209,7 @@ input {
   width: 50%;
   align-self: right;
   padding: 3px;
+  overflow-wrap: break-word;
 }
 
 .sent-member {
@@ -227,6 +228,7 @@ input {
   width: 50%;
   align-self: right;
   padding: 3px;
+  overflow-wrap: break-word;
 }
 
 .received-member {

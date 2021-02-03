@@ -98,9 +98,9 @@ document.getElementById("create-button").onclick = () => {
       meal = "dinner";
     }
 
-    if (hour > 12) {
+    if (hour >= 12) {
       day = "PM";
-      hour = hour - 12;
+      hour = 24 - hour;
     }
 
     let event_card_div = document.createElement("div");

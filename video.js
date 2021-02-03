@@ -39,15 +39,15 @@ client.join(null, channel_name, user_name, () => {
   localStream.init(() => {
     console.log("JOINING");
 
-    // create main frame name
-    let mainFrameName = document.createElement("div");
-    mainFrameName.id = "main-frame-name";
-    document.getElementById("right-pane").appendChild(mainFrameName);
+    // // create main frame name
+    // let mainFrameName = document.createElement("div");
+    // mainFrameName.id = "main-frame-name";
+    // document.getElementById("right-pane").appendChild(mainFrameName);
 
-    // create main frame
-    let mainFrame = document.createElement("div");
-    mainFrame.id = "main-frame";
-    document.getElementById("right-pane").appendChild(mainFrame);
+    // // create main frame
+    // let mainFrame = document.createElement("div");
+    // mainFrame.id = "main-frame";
+    // document.getElementById("right-pane").appendChild(mainFrame);
 
     // play video on main frame
     localStream.play("main-frame");
@@ -55,31 +55,31 @@ client.join(null, channel_name, user_name, () => {
     client.publish(localStream);
 
     // add name to main frame
-    mainFrameName.innerHTML = localStream.getId();
+    document.getElementById("main-frame-name").innerHTML = localStream.getId();
 
-    // add video and mute buttons
-    let video_mute_bar = document.createElement("div");
-    video_mute_bar.id = "video-mute-bar";
+    // // add video and mute buttons
+    // let video_mute_bar = document.createElement("div");
+    // video_mute_bar.id = "video-mute-bar";
 
-    let flex_div = document.createElement("div");
-    flex_div.id = "flex-div";
+    // let flex_div = document.createElement("div");
+    // flex_div.id = "flex-div";
 
-    let video_div = document.createElement("div");
-    video_div.id = "video";
-    video_div.onclick = video;
-    video_div.innerHTML =
-      '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>';
+    // let video_div = document.createElement("div");
+    // video_div.id = "video";
+    // video_div.onclick = video;
+    // video_div.innerHTML =
+    //   '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>';
 
-    let mic_div = document.createElement("div");
-    mic_div.id = "mic";
-    mic_div.onclick = mic;
-    mic_div.innerHTML =
-      '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" /></svg>';
+    // let mic_div = document.createElement("div");
+    // mic_div.id = "mic";
+    // mic_div.onclick = mic;
+    // mic_div.innerHTML =
+    //   '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" /></svg>';
 
-    flex_div.appendChild(video_div);
-    flex_div.appendChild(mic_div);
-    video_mute_bar.appendChild(flex_div);
-    document.getElementById("right-pane").appendChild(video_mute_bar);
+    // flex_div.appendChild(video_div);
+    // flex_div.appendChild(mic_div);
+    // video_mute_bar.appendChild(flex_div);
+    // document.getElementById("right-pane").appendChild(video_mute_bar);
 
     // add name to participant list
     let participant_div = document.createElement("div");
